@@ -1,4 +1,4 @@
-let g:coc_global_extensions = ['coc-snippets', 'coc-vimlsp']
+let g:coc_global_extensions = ['coc-snippets', 'coc-vimlsp', 'coc-explorer', 'coc-json']
 if isdirectory('./node_modules')
   let g:coc_global_extensions += ['coc-tsserver']
   if isdirectory('./node_modules/prettier')
@@ -186,3 +186,5 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+nmap <space>b :CocCommand explorer<cr>
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif

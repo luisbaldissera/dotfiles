@@ -10,22 +10,6 @@
   ],
   "coc.preferences.formatOnType": true,
   "diagnostic.errorSign": "✗",
-  "diagnostic-languageserver.linters": {
-    "rubocop": {
-      "command": "bundle",
-      "sourceName": "rubocop",
-      "debounce": 100,
-      "args": [
-        "exec",
-        "rubocop",
-        "--format",
-        "json",
-        "--force-exclusion",
-        "%filepath"
-      ]
-    }
-  },
-  "diagnostics.infoSign": "?",
   "diagnostic.warningSign": "Δ",
   "eslint.autoFixOnSave": true,
   "eslint.filetypes": [
@@ -34,6 +18,13 @@
     "typescript",
     "typescriptreact"
   ],
+  "explorer.icon.enableNerdfont": true,
+  "explorer.keyMappings": {
+    "<cr>": ["expandable?", "expand", "open"],
+    "v": "open:split"
+  },
+  "explorer.previewAction.onHover": false,
+  "explorer.width": 30,
   "prettier.disableSuccessMessage": true,
   "snippets.ultisnips.directories": [ "~/nvim/snips" ],
   "tsserver.formatOnType": true

@@ -1,0 +1,40 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "html",
+    "java",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "coc.preferences.formatOnType": true,
+  "diagnostic.errorSign": "✗",
+  "diagnostic-languageserver.linters": {
+    "rubocop": {
+      "command": "bundle",
+      "sourceName": "rubocop",
+      "debounce": 100,
+      "args": [
+        "exec",
+        "rubocop",
+        "--format",
+        "json",
+        "--force-exclusion",
+        "%filepath"
+      ]
+    }
+  },
+  "diagnostics.infoSign": "?",
+  "diagnostic.warningSign": "Δ",
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "prettier.disableSuccessMessage": true,
+  "snippets.ultisnips.directories": [ "~/nvim/snips" ],
+  "tsserver.formatOnType": true
+}

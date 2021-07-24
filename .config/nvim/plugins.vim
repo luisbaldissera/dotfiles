@@ -1,5 +1,6 @@
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
   Plug 'airblade/vim-gitgutter'
+  Plug 'fladson/vim-kitty'
   Plug 'itchyny/lightline.vim'
   Plug 'junegunn/vim-peekaboo'
   Plug 'kshenoy/vim-signature'

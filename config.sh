@@ -3,6 +3,12 @@
 NVIM_CONFIG_DIR=${NVIM_CONFIG_DIR:-$HOME/.config/nvim}
 KITTY_CONFIG_DIR=${KITTY_CONFIG_DIR:-$HOME/.config/kitty}
 
+# Configure zsh
+if ! hash zsh 2>/dev/null
+then
+    echo "Error (zsh): You need to install zsh first"
+fi
+
 # Configure nvim
 if ! hash nvim 2>/dev/null
 then

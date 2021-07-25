@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/luis/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -71,10 +71,10 @@ ZSH_THEME="spaceship"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	git
-	zsh-autosuggestions
-	zsh-syntax-highlighting
-	aws
+    aws
+    git
+    zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -115,7 +115,7 @@ export PATH=$PATH:/usr/local/cuda/bin
 export FZF_DEFAULT_COMMAND='fdfind --type f --hidden --follow --exclude .git'
 
 # Py Env
-export PYENV_ROOT='/home/luis/.pyenv'
+export PYENV_ROOT="$HOME/.pyenv"
 export PATH=$PATH:"$PYENV_ROOT/bin"
 if command -v pyenv 1>/dev/null 2>&1; then
     eval "$(pyenv init -)"

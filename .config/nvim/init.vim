@@ -32,7 +32,7 @@ set expandtab
 augroup tabgroup
   autocmd!
   autocmd FileType c,cpp,java,python,vim,html,css,javascript,typescript,javascriptreact,typescriptreact,json,ruby,eruby setl tabstop=2 shiftwidth=2
-  autocmd FileType sql,sh setl tabstop=4 shiftwidth=4
+  autocmd FileType sql,sh,zsh setl tabstop=4 shiftwidth=4
 augroup end
 
 " Folding

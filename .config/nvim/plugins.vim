@@ -16,6 +16,7 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'pangloss/vim-javascript'
   Plug 'peitalin/vim-jsx-typescript'
+  Plug 'puremourning/vimspector'
   Plug 'rhysd/git-messenger.vim'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'

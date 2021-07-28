@@ -19,12 +19,8 @@
     "typescriptreact"
   ],
   "explorer.icon.enableNerdfont": true,
-  "explorer.keyMappings": {
-    "<cr>": ["expandable?", "expand", "open"],
-    "v": "open:split"
-  },
   "explorer.previewAction.onHover": false,
-  "explorer.width": 30,
+  "explorer.width": 40,
   "prettier.disableSuccessMessage": true,
   "snippets.ultisnips.directories": [ "~/nvim/snips" ],
   "tsserver.formatOnType": true

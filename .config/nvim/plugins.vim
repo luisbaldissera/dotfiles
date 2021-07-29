@@ -20,6 +20,7 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
   Plug 'rhysd/git-messenger.vim'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-liquid'
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-surround'

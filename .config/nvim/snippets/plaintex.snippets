@@ -1,0 +1,39 @@
+snippet invoice "Make invoice template"
+	%% Github: https://github.com/mathialo/simpleinvoice
+	\documentclass[english]{article}
+
+	\usepackage{simpleinvoice}
+
+	\begin{document}
+
+	\setinvoicetitle{${1:My Invoice}}
+	\setinvoicenumber{${2:42}}
+
+	\setreceivername{${3:Person McNameface}}
+	\setreceiveraddress{${4:Roadname 35C \\ 52353 Cityville}}
+
+	\setname{${5:My Name}}
+	\setaddress{${6:Streetname 4644C \\ 0000 City}}{${7:Streetname 4644C / 0000 City}}
+	\setphonenumber{${8:123 45 678}}
+	\setemail{${9:mail@domain.com}}
+
+	\setyourref{${10:Person McNameface}}
+	\setourref{${11:My Name}}
+
+	\setinvoicedate{${12:April 1, 2017}}
+	\setdeadline{${13:21}}     % extends deadline to April 22, 2017
+
+	\additem{${14:Description}}{${15:Unity Value} ${16:USD}}{${17:Quantitiy}}{${18:Total} $16}
+	$19
+
+	\setsubtotal{${20:650} $16}
+	\setvat{${20:0} $16}
+	\settotal{${21:$19} $16}
+	\setaccountnumber{${22:1234 56 78910}}
+	\makeinvoice
+
+	\end{document}
+	
+
+snippet additem "Add item to an invoice"
+	\additem{${1:Description}}{${2:Unity Value} ${3:USD}}{${4:Quantitiy}}{${5:Total} $3}

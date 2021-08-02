@@ -17,7 +17,12 @@ else
     echo -n "Configuring nvim ... "
     mkdir -p $NVIM_CONFIG_DIR
     cp -r .config/nvim/. $NVIM_CONFIG_DIR
-    nvim -c 'PlugInstall' -c 'qa'
+    echo "OK"
+    echo -n "Installing plugins ... "
+    nvim -c 'PlugUpdate' -c 'qa'
+    echo "OK"
+    echo -n "Intalling vimspector languages ... "
+    nvim -c 'VimspectorUpdate' -c 'qa'
     echo "OK"
 fi
 

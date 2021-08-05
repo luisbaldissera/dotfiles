@@ -8,11 +8,14 @@ source $HOME/.config/nvim/plug-config/gruvbox.vim
 source $HOME/.config/nvim/plug-config/indentline.vim
 source $HOME/.config/nvim/plug-config/lightline.vim
 source $HOME/.config/nvim/plug-config/telescope.vim
+source $HOME/.config/nvim/plug-config/theme.vim
 source $HOME/.config/nvim/plug-config/vimspector.vim
 
 " Moving lines
 map <c-k> :move -2 .<cr>
 map <c-j> :move +1 .<cr>
+vmap <c-j> :m '>+1<CR>gv=gv
+vmap <c-k> :m '<-2<CR>gv=gv
 
 " Edit file under cursos in previous window
 map <c-w>gp :let mycurf=expand("<cfile>")<cr>:winc p<cr>:execute("e ".mycurf)<cr>
@@ -27,27 +30,8 @@ map <tab>l :+tabmove<cr>
 set number
 set relativenumber
 
-" Replace tabs by spaces
-set expandtab
-
-" Tab and indenting
-augroup tabgroup
-  autocmd!
-  autocmd FileType c,cpp,java,python,vim,html,css,javascript,typescript,javascriptreact,typescriptreact,json,ruby,eruby setl tabstop=2 shiftwidth=2
-  autocmd FileType sql,sh,zsh setl tabstop=4 shiftwidth=4
-augroup end
-
 " Folding
 augroup foldgroup
   autocmd!
   autocmd FileType git setl foldmethod=syntax
 augroup end
-
-" Color scheme
-set termguicolors
-set background=dark
-colorscheme gruvbox
-
-highlight Normal ctermbg=NONE guibg=NONE
-highlight LineNr ctermbg=NONE guibg=NONE
-highlight SignColumn ctermbg=NONE guibg=NONE

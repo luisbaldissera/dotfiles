@@ -1,10 +1,6 @@
 " Fugitive
-map <leader>gs :Git<cr>
-map <leader>gd :Gdiffsplit<cr>
-map <leader>gl :Git log<cr>
-map <leader>gb :Git blame<cr>
-
-" Diff mode
-map <leader>gh :diffget //2<cr>
-map <leader>gl :diffget //3<cr>
+map <silent> <leader>gs :Git<cr>:15winc _<cr>
+map <silent> <leader>gd :Gdiffsplit<cr>
+map <silent> <leader>gl :Git log<cr>
+map <silent> <leader>gb :Git blame<cr>
 

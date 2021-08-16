@@ -19,6 +19,7 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'puremourning/vimspector'
   Plug 'rhysd/git-messenger.vim'
+  Plug 'stevearc/vim-arduino'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-liquid'

@@ -8,8 +8,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
 ZSH_THEME="spaceship"
+#ZSH_THEME="robbyrussell"
 #SOLARIZED_THEME="dark"
 
 # Set list of themes to pick from when loading at random
@@ -143,6 +143,10 @@ export PATH=$PATH:$HOME/.cargo/bin
 
 # Ruby
 eval "$(rbenv init -)"
+
+# NPM
+export NPM_GLOBAL_DIR=$HOME/.npm-global
+export PATH=$PATH:$NPM_GLOBAL_DIR/bin
 
 precmd() {
     print -Pn "\e]0;${PWD##*/}\a"

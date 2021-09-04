@@ -20,15 +20,9 @@ vmap <c-k> :m '<-2<CR>gv=gv
 " Edit file under cursos in previous window
 map <c-w>gp :let mycurf=expand("<cfile>")<cr>:winc p<cr>:execute("e ".mycurf)<cr>
 
-" Tab managing
-map <tab>n :tabnew .<cr>
-map <tab>c :tabclose<cr>
-map <tab>h :-tabmove<cr>
-map <tab>l :+tabmove<cr>
-
-" Line numbering
-set number
-set relativenumber
+source $HOME/.config/nvim/custom/tabs.vim
+source $HOME/.config/nvim/custom/options.vim
+source $HOME/.config/nvim/custom/bin.vim
 
 " Folding
 augroup foldgroup

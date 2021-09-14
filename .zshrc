@@ -145,7 +145,7 @@ export PATH=$PATH:$HOME/.cargo/bin
 eval "$(rbenv init -)"
 
 # NPM
-export NPM_GLOBAL_DIR=$HOME/.npm-global
+export NPM_GLOBAL_DIR="$HOME/.npm-global"
 export PATH=$PATH:$NPM_GLOBAL_DIR/bin
 
 precmd() {

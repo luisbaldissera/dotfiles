@@ -36,3 +36,17 @@ else
     cp -r .config/kitty/. $KITTY_CONFIG_DIR
     echo "OK"
 fi
+
+# Configure VS Code
+if !hash code 2>/dev/null
+    echo "Error (VS Code): You need to install VSCode first"
+else
+    for id in "$(cat vscode_extensions)"
+    do
+        EXTENSION_ID=$id
+        EXTENSION_NAME=${EXTENSIONS[$id]}
+        echo -n "Installing VSCode extension '${EXTENSION_NAME}' ... "
+        code --install-extension "${EXTENSION_ID}" &>/dev/null
+        echo "OK"
+    done
+fi

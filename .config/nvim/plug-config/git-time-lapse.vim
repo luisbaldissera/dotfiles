@@ -1,2 +1,2 @@
-nmap <Leader>gt <Plug>(git-time-lapse)
+nmap <leader>gt <Plug>(git-time-lapse)
 

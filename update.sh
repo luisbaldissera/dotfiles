@@ -8,3 +8,6 @@ cp -r $HOME/.config/kitty/. .config/kitty
 
 # zsh
 cp $HOME/.zshrc .zshrc
+
+# VSCode
+echo "$(code --list-extensions)" > vscode_extensions

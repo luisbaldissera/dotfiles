@@ -9,23 +9,8 @@
     "typescriptreact"
   ],
   "coc.preferences.formatOnType": true,
+  "codeLens.enable": true,
   "diagnostic.errorSign": "✗",
-  "diagnostic-languageserver.linters": {
-    "rubocop": {
-      "command": "bundle",
-      "sourceName": "rubocop",
-      "debounce": 100,
-      "args": [
-        "exec",
-        "rubocop",
-        "--format",
-        "json",
-        "--force-exclusion",
-        "%filepath"
-      ]
-    }
-  },
-  "diagnostics.infoSign": "?",
   "diagnostic.warningSign": "Δ",
   "eslint.autoFixOnSave": true,
   "eslint.filetypes": [
@@ -34,7 +19,13 @@
     "typescript",
     "typescriptreact"
   ],
+  "explorer.icon.enableNerdfont": true,
+  "explorer.previewAction.onHover": false,
+  "explorer.width": 40,
   "prettier.disableSuccessMessage": true,
-  "snippets.ultisnips.directories": [ "~/nvim/snips" ],
-  "tsserver.formatOnType": true
+  "snippets.ultisnips.directories": [
+    "~/nvim/snippets"
+  ],
+  "tsserver.formatOnType": true,
+  "java.referencesCodeLens.enabled": true
 }

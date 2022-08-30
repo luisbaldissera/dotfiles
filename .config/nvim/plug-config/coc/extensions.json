@@ -1,0 +1,22 @@
+{
+  "extensions": [
+    "docker",
+    "explorer",
+    "format-json",
+    "java",
+    "java-debug",
+    "json",
+    "lua",
+    "markdown-preview-enhanced",
+    "markdownlint",
+    "marketplace",
+    "prettier",
+    "snippets",
+    "solargraph",
+    "sql",
+    "tsserver",
+    "vimlsp",
+    "vimtex",
+    "yaml"
+  ]
+}

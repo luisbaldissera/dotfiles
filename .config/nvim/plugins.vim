@@ -1,7 +1,13 @@
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
+  Plug 'Joorem/vim-haproxy'
+  Plug 'Yggdroot/indentLine'
   Plug 'airblade/vim-gitgutter'
+  Plug 'fannheyward/telescope-coc.nvim'
+  Plug 'fladson/vim-kitty'
+  Plug 'honza/vim-snippets'
   Plug 'itchyny/lightline.vim'
   Plug 'junegunn/vim-peekaboo'
+  Plug 'junkblocker/git-time-lapse'
   Plug 'kshenoy/vim-signature'
   Plug 'leafgarland/typescript-vim'
   Plug 'lervag/vimtex'
@@ -11,18 +17,22 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-lua/popup.nvim'
+  Plug 'nvim-telescope/telescope-file-browser.nvim'
+  Plug 'nvim-telescope/telescope-github.nvim'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'pangloss/vim-javascript'
   Plug 'peitalin/vim-jsx-typescript'
+  Plug 'puremourning/vimspector'
   Plug 'rhysd/git-messenger.vim'
+  Plug 'stevearc/vim-arduino'
+  Plug 'tkhren/vim-fake'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-liquid'
   Plug 'tpope/vim-rails'
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-surround'
   Plug 'vim-ruby/vim-ruby'
-  Plug 'will133/vim-dirdiff'
-  Plug 'Yggdroot/indentLine'
 call plug#end()
 

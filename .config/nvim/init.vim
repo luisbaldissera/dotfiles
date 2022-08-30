@@ -1,49 +1,24 @@
+let mapleader = ','
+
 source $HOME/.config/nvim/plugins.vim
-source $HOME/.config/nvim/plug-config/lightline.vim
-source $HOME/.config/nvim/plug-config/fugitive.vim
-source $HOME/.config/nvim/plug-config/gruvbox.vim
-source $HOME/.config/nvim/plug-config/coc.vim
-source $HOME/.config/nvim/plug-config/telescope.vim
-source $HOME/.config/nvim/plug-config/indentline.vim
-source $HOME/.config/nvim/plug-config/git-gutter.vim
-source $HOME/.config/nvim/plug-config/git-messenger.vim
+source $HOME/.config/nvim/plug-config/index.vim
 
 " Moving lines
-map <c-k> :move -2 .<cr>
-map <c-j> :move +1 .<cr>
+nnoremap <c-k> :move -2 .<cr>
+nnoremap <c-j> :move +1 .<cr>
+vnoremap <c-j> :move '>+1<cr>gv=gv
+vnoremap <c-k> :move '<-2<cr>gv=gv
 
-" Edit file under cursos in previous window
-map <c-w>gp :let mycurf=expand("<cfile>")<cr>:winc p<cr>:execute("e ".mycurf)<cr>
+" Avoid using arrow keys. Those maps force to use hjkl movments.
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
 
-" Tab managing
-map <tab>n :tabnew .<cr>
-map <tab>c :tabclose<cr>
-map <tab>h :-tabmove<cr>
-map <tab>l :+tabmove<cr>
+" Edit file under cursor in previous window
+nnoremap <c-w>gp :let mycurf=expand('<cfile>')<cr>:winc p<cr>:execute('edit ' . mycurf)<cr>
 
-" Line numbering
-set number
-set relativenumber
+" Configure CTRL-G behavior
+set shortmess=filmrnxtToOF
 
-" Replace tabs by spaces
-set expandtab
-
-" Tab and indenting
-augroup tabgroup
-  autocmd!
-  autocmd FileType c,cpp,java,python,vim,html,css,javascript,typescript,javascriptreact,typescriptreact,json,ruby,eruby setl tabstop=2 shiftwidth=2
-  autocmd FileType sql setl tabstop=4 shiftwidth=4
-augroup end
-
-" Folding
-augroup foldgroup
-  autocmd!
-  autocmd FileType git setl foldmethod=syntax
-augroup end
-
-" Color scheme
-set termguicolors
-set background=dark
-colorscheme gruvbox
-
-
+source $HOME/.config/nvim/custom/index.vim

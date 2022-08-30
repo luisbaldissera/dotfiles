@@ -6,8 +6,8 @@ let g:lightline = {
 	\             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
 	\ },
 	\ 'component_function': {
+  \   'fugitive': '%{FugitiveStatusline()}',
 	\   'cocstatus': 'coc#status'
 	\ },
 \ }
 autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
-

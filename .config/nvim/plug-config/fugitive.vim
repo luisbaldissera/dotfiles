@@ -12,13 +12,14 @@ function! fugitive#linelog()
   let l:first = line("'<")
   let l:last = line("'>")
   let l:fname = expand('%')
-  execute 'Git log -L ' . l:first . ',' . l:last . ':' . fname
+  let l:arg = l:first . ',' . l:last . ':' . l:fname
+  execute 'Git log -L' fnameescape(l:arg)
 endfunction
 
 " Git log of the current file
-function! fugitive#linelog()
+function! fugitive#filelog()
   let l:fname = expand('%')
-  execute 'Git log -- ' . l:fname
+  execute 'Git log --' fnameescape(l:fname)
 endfunction
 
 " Do not show number side bar on fugitive and git related buffers.

@@ -1,3 +1,4 @@
+" Transform the data in the current buffer into xxd type.
 function! xxd#apply()
   if &filetype != 'xxd'
     let b:initialfiletype = &filetype
@@ -6,6 +7,7 @@ function! xxd#apply()
   endif
 endfunction
 
+" Revert a xxd buffer in bytes
 function! xxd#revert()
   if &filetype == 'xxd'
     exec '%!xxd -r'
@@ -13,6 +15,7 @@ function! xxd#revert()
   endif
 endfunction
 
+" Updates content of current xxd buffer
 function! xxd#update()
   let l:pos = getpos('.')
   if &filetype == 'xxd'

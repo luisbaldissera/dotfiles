@@ -1,8 +1,3 @@
-let g:vimspector_install_gadgets = [
-    \ 'vscode-cpptools',
-    \ 'vscode-node-debug2'
-    \ ]
-
 let g:vimspector_base_dir = $HOME . '/.local/share/nvim/plugged/vimspector'
 
 nnoremap <leader>db <Plug>VimspectorToggleBreakpoint

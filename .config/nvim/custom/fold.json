@@ -3,6 +3,9 @@
     "syntax": [
       "sql",
       "git"
+    ],
+    "marker": [
+      "vim"
     ]
   }
 }

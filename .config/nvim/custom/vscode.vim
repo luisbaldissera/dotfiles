@@ -4,7 +4,8 @@ function! vscode#open()
   let l:line = line('.')
   let l:col = col('.')
   let l:cwd = getcwd()
-  execute "silent !code " . l:cwd . " --goto '" . l:fname . ':' . l:line . ':' . l:col . "'"
+  let l:goto = l:fname . ':' . l:line . ':' . l:col
+  execute "silent !code" shellescape(l:cwd) "--goto" shellescape(l:goto)
   redraw!
 endfunction
 

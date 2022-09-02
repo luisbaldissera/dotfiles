@@ -1,0 +1,142 @@
+{
+  "ui": {
+    "colorscheme": "onehalfdark",
+    "syntax": "on"
+  },
+  "options": {
+    "background": "dark",
+    "backup": false,
+    "cursorline": true,
+    "expandtab": true,
+    "ignorecase": true,
+    "number": true,
+    "relativenumber": true,
+    "shiftwidth": 2,
+    "shortmess": "filmrnxtToOF",
+    "sidescroll": 5,
+    "signcolumn": "yes",
+    "smartcase": true,
+    "tabstop": 2,
+    "termguicolors": true,
+    "updatetime": 300,
+    "writebackup": false
+  },
+  "plugins": {
+    "Joorem/vim-haproxy": {},
+    "Yggdroot/indentLine": {
+      "options": {
+        "g:indentLine_char": "|",
+        "g:indentLine_fileTypeExclude": [
+          "coc-explorer",
+          "help",
+          "terminal"
+        ]
+      }
+    },
+    "airblade/vim-gitgutter": {},
+    "fannheyward/telescope-coc.nvim": {},
+    "fladson/vim-kitty": {},
+    "honza/vim-snippets": {},
+    "itchyny/lightline.vim": {
+      "options": {
+        "g:lightline": {
+          "colorscheme": "powerline",
+          "active": {
+            "left": [
+              [
+                "mode",
+                "paste"
+              ],
+              [
+                "cocstatus",
+                "readonly",
+                "filename",
+                "modified"
+              ]
+            ]
+          },
+          "component_function": {
+            "fugitive": "%{FugitiveStatusline()}",
+            "cocstatus": "coc#status"
+          }
+        }
+      }
+    },
+    "junegunn/vim-peekaboo": {},
+    "junkblocker/git-time-lapse": {},
+    "kshenoy/vim-signature": {},
+    "leafgarland/typescript-vim": {},
+    "lervag/vimtex": {},
+    "liuchengxu/space-vim-theme": {},
+    "maxmellon/vim-jsx-pretty": {},
+    "morhetz/gruvbox": {
+      "options": {
+        "g:gruvbox_contrast_dark": "hard"
+      }
+    },
+    "neoclide/coc.nvim": {
+      "install": {
+        "branch": "release"
+      },
+      "options": {
+        "g:coc_global_extensions": [
+          "coc-docker",
+          "coc-explorer",
+          "coc-format-json",
+          "coc-java",
+          "coc-java-debug",
+          "coc-json",
+          "coc-lua",
+          "coc-markdown-preview-enhanced",
+          "coc-markdownlint",
+          "coc-marketplace",
+          "coc-prettier",
+          "coc-snippets",
+          "coc-solargraph",
+          "coc-sql",
+          "coc-tsserver",
+          "coc-vimlsp",
+          "coc-vimtex",
+          "coc-yaml"
+        ]
+      },
+      "g:coc_snippet_next": "<TAB>"
+    },
+    "nvim-lua/plenary.nvim": {},
+    "nvim-lua/popup.nvim": {},
+    "nvim-telescope/telescope-file-browser.nvim": {},
+    "nvim-telescope/telescope-github.nvim": {},
+    "nvim-telescope/telescope.nvim": {},
+    "nvim-treesitter/nvim-treesitter": {
+      "install": {
+        "do": ":TSUpdate"
+      }
+    },
+    "pangloss/vim-javascript": {},
+    "peitalin/vim-jsx-typescript": {},
+    "puremourning/vimspector": {
+      "options": {
+        "g:vimspector_install_gadgets": [
+          "vscode-cpptools",
+          "vscode-node-debug2"
+        ]
+      }
+    },
+    "rhysd/git-messenger.vim": {},
+    "sonph/onehalf": {
+      "install": {
+        "rtp": "vim"
+      }
+    },
+    "stevearc/vim-arduino": {},
+    "tkhren/vim-fake": {},
+    "tomasr/molokai": {},
+    "tpope/vim-commentary": {},
+    "tpope/vim-fugitive": {},
+    "tpope/vim-liquid": {},
+    "tpope/vim-rails": {},
+    "tpope/vim-sensible": {},
+    "tpope/vim-surround": {},
+    "vim-ruby/vim-ruby": {}
+  }
+}

@@ -14,7 +14,7 @@ endfunction
 
 " TODO toggle git status
 function! fugitive#togglestatus()
-  Git | 15winc _
+  topleft Git | execute "15wincmd _"
 endfunction
 
 " TODO toggle diff split
@@ -25,6 +25,13 @@ endfunction
 " TODO toggle git blame
 function! fugitive#toggleblame()
   Git blame
+endfunction
+
+" Close the current buffer if it is fugitive
+function! fugitive#close()
+  if &filetype ==# 'fugitive'
+    execute 'close' bufwinnr('%')
+  endif
 endfunction
 
 " }}}
@@ -53,7 +60,10 @@ vnoremap <silent> <leader>gL <esc>:'<,'>call fugitive#linelog()<cr>
 " Do not show number side bar on fugitive and git related buffers.
 augroup fugitive_custom
   autocmd!
+  " Avoid showing number for fugitive and git buffers
   autocmd FileType fugitive,git setlocal nonumber norelativenumber
+  " Automatically closes Git status fugitive window on leave
+  autocmd BufLeave * :call fugitive#close()
 augroup end
 
 " vim: foldmethod=marker

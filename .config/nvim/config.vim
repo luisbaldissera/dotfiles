@@ -8,19 +8,9 @@ let s:ui = get(s:config, 'ui', {})
 " Helper functions {{{
 
 " Set a Vim option for a given variable.
-"
-" E.g.:
-"   config#set('number', v:true) -> set number
-"   config#set('number', v:false) -> set nonumber
-"   config#set('tabstop', 4) -> set tabstop=4
 function! config#set(option, value)
-  let l:option = a:option
-  if a:value == v:false
-    let l:option = 'no' . a:option
-  elseif a:value != v:true
-    let l:option = a:option . '=' . a:value
-  endif
-  execute 'set' l:option
+  let l:value = a:value == v:false ? 0 : a:value == v:true ? 1 : string(a:value)
+  execute 'let' '&' . a:option '=' l:value
 endfunction
 
 " Add Plug plugin and set related variables

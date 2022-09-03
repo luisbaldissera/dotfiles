@@ -1,13 +1,16 @@
 {
   "ui": {
-    "colorscheme": "onehalfdark",
+    "colorscheme": "gruvbox",
+    "filetype": "plugin indent on",
     "syntax": "on"
   },
   "options": {
+    "autoindent": true,
     "background": "dark",
     "backup": false,
     "cursorline": true,
     "expandtab": true,
+    "hlsearch": true,
     "ignorecase": true,
     "number": true,
     "relativenumber": true,
@@ -16,6 +19,7 @@
     "sidescroll": 5,
     "signcolumn": "yes",
     "smartcase": true,
+    "smartindent": true,
     "tabstop": 2,
     "termguicolors": true,
     "updatetime": 300,

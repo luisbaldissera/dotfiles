@@ -1,3 +1,6 @@
+
+" Helper functions {{{
+
 " Transform the data in the current buffer into xxd type.
 function! xxd#apply()
   if &filetype != 'xxd'
@@ -25,6 +28,10 @@ function! xxd#update()
   endif
 endfunction
 
+" }}}
+
 command Xxd :call xxd#apply()
 command XxdRevert :call xxd#revert()
 command XxdUpdate :call xxd#update()
+
+" vim: foldmethod=marker

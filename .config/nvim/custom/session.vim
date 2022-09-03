@@ -4,6 +4,8 @@ let g:session_file = '.vim/session.vim'
 " Only save sessions in git repositories
 let g:session_should_save = isdirectory('.git')
 
+" Help functions {{{
+
 " Load the session from the g:session_file if it exists
 function! session#load()
   if filereadable(g:session_file)
@@ -20,6 +22,8 @@ function! session#store()
   endif
 endfunction
 
+" }}}
+
 " Load and save session file automatically when entering and leaving vim.
 augroup session_group
   autocmd!
@@ -27,4 +31,4 @@ augroup session_group
   autocmd VimEnter * :call session#load()
 augroup end
 
-
+" vim: foldmethod=marker

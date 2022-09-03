@@ -79,6 +79,7 @@
         "branch": "release"
       },
       "options": {
+        "g:coc_snippet_next": "<TAB>",
         "g:coc_global_extensions": [
           "coc-docker",
           "coc-explorer",
@@ -99,8 +100,7 @@
           "coc-vimtex",
           "coc-yaml"
         ]
-      },
-      "g:coc_snippet_next": "<TAB>"
+      }
     },
     "nvim-lua/plenary.nvim": {},
     "nvim-lua/popup.nvim": {},

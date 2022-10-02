@@ -12,18 +12,47 @@
     "expandtab": true,
     "hlsearch": true,
     "ignorecase": true,
+    "incsearch": true,
+    "magic": true,
     "number": true,
     "relativenumber": true,
-    "shiftwidth": 2,
+    "shiftwidth": {
+      "global": 2,
+      "local": {
+        "java": 4,
+        "bash": 4,
+        "sh": 4
+      }
+    },
     "shortmess": "filmrnxtToOF",
     "sidescroll": 5,
     "signcolumn": "yes",
     "smartcase": true,
     "smartindent": true,
-    "tabstop": 2,
     "termguicolors": true,
     "updatetime": 300,
-    "writebackup": false
+    "writebackup": false,
+    "foldmethod": {
+      "global": "syntax",
+      "local": {
+        "vim": "marker"
+      }
+    },
+    "foldlevel": {
+      "global": 999,
+      "local": {
+        "sql": 0,
+        "vim": 0
+      }
+    },
+    "tabstop": {
+      "global": "2",
+      "local": {
+        "java": 4,
+        "bash": 4,
+        "sh": 4
+      }
+    }
   },
   "plugins": {
     "Joorem/vim-haproxy": {},
@@ -31,13 +60,17 @@
       "options": {
         "g:indentLine_char": "|",
         "g:indentLine_fileTypeExclude": [
+          "",
           "coc-explorer",
           "help",
+          "man",
+          "plaintext",
           "terminal"
         ]
       }
     },
     "airblade/vim-gitgutter": {},
+    "ap/vim-css-color": {},
     "fannheyward/telescope-coc.nvim": {},
     "fladson/vim-kitty": {},
     "honza/vim-snippets": {},
@@ -47,20 +80,12 @@
           "colorscheme": "powerline",
           "active": {
             "left": [
-              [
-                "mode",
-                "paste"
-              ],
-              [
-                "cocstatus",
-                "readonly",
-                "filename",
-                "modified"
-              ]
+              ["mode", "paste"],
+              ["cocstatus", "gitbranch", "readonly", "filename", "modified"]
             ]
           },
           "component_function": {
-            "fugitive": "%{FugitiveStatusline()}",
+            "gitbranch": "FugitiveHead",
             "cocstatus": "coc#status"
           }
         }

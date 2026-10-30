@@ -1,0 +1,4 @@
+# Personal cross-project defaults belong here. An empty mapping keeps workmux's
+# built-in defaults until explicit preferences are chosen.
+{}
+

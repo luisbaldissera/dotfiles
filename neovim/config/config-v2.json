@@ -1,0 +1,120 @@
+{
+  "options": {
+    "autoindent": true,
+    "background": "dark",
+    "backup": false,
+    "compatible": false,
+    "cursorline": true,
+    "expandtab": true,
+    "foldlevel": {
+      "global": 999,
+      "local": {"git": 0, "json": 2, "sql": 0, "vim": 0}
+    },
+    "foldmethod": {"global": "syntax", "local": {"vim": "marker"}},
+    "hlsearch": true,
+    "ignorecase": true,
+    "incsearch": true,
+    "magic": true,
+    "number": true,
+    "relativenumber": true,
+    "shiftwidth": {
+      "global": 2,
+      "local": {"bash": 4, "java": 4, "make": 4, "sh": 4}
+    },
+    "shortmess": "filmrnxtToOF",
+    "sidescroll": 5,
+    "signcolumn": "yes",
+    "smartcase": true,
+    "smartindent": true,
+    "tabstop": {
+      "global": "2",
+      "local": {"bash": 4, "java": 4, "make": 4, "sh": 4}
+    },
+    "termguicolors": true,
+    "updatetime": 300,
+    "writebackup": false
+  },
+  "pack": {
+    "start": {
+      "Joorem/vim-haproxy": {},
+      "Yggdroot/indentLine": {
+        "options": {
+          "g:indentLine_char": "|",
+          "g:indentLine_fileTypeExclude": [
+            "",
+            "help",
+            "man",
+            "NvimTree",
+            "plaintext",
+            "terminal"
+          ]
+        }
+      },
+      "airblade/vim-gitgutter": {},
+      "ap/vim-css-color": {},
+      "fladson/vim-kitty": {},
+      "honza/vim-snippets": {},
+      "hrsh7th/nvim-cmp": {},
+      "itchyny/lightline.vim": {
+        "options": {
+          "g:lightline": {
+            "active": {
+              "left": [
+                ["mode", "paste"],
+                ["gitbranch", "readonly", "filename", "modified"]
+              ]
+            },
+            "colorscheme": "powerline",
+            "component_function": {"gitbranch": "FugitiveHead"}
+          }
+        }
+      },
+      "junegunn/vim-peekaboo": {},
+      "junkblocker/git-time-lapse": {},
+      "kshenoy/vim-signature": {},
+      "kyazdani42/nvim-tree.lua": {
+        "options": {"g:loaded": 1, "g:loaded_netrwPlugin": 1}
+      },
+      "kyazdani42/nvim-web-devicons": {},
+      "leafgarland/typescript-vim": {},
+      "lervag/vimtex": {},
+      "liuchengxu/space-vim-theme": {},
+      "maxmellon/vim-jsx-pretty": {},
+      "morhetz/gruvbox": {"options": {"g:gruvbox_contrast_dark": "hard"}},
+      "nvim-lua/plenary.nvim": {},
+      "nvim-lua/popup.nvim": {},
+      "nvim-treesitter/nvim-treesitter": {"install": {"do": ":TSUpdate"}},
+      "pangloss/vim-javascript": {},
+      "peitalin/vim-jsx-typescript": {},
+      "puremourning/vimspector": {
+        "options": {
+          "g:vimspector_install_gadgets": [
+            "vscode-cpptools",
+            "vscode-node-debug2"
+          ]
+        }
+      },
+      "rhysd/git-messenger.vim": {},
+      "sonph/onehalf": {"install": {"rtp": "vim"}},
+      "stevearc/vim-arduino": {},
+      "tkhren/vim-fake": {},
+      "tomasr/molokai": {},
+      "tpope/vim-commentary": {},
+      "tpope/vim-fugitive": {},
+      "tpope/vim-jdaddy": {},
+      "tpope/vim-liquid": {},
+      "tpope/vim-rails": {},
+      "tpope/vim-sensible": {},
+      "tpope/vim-surround": {},
+      "vim-ruby/vim-ruby": {},
+      "williamboman/mason.nvim": {},
+      "xuhdev/vim-latex-live-preview": {}
+    }
+  },
+  "ui": {
+    "colorscheme": "gruvbox",
+    "filetype": "plugin indent on",
+    "syntax": "on"
+  }
+}
+

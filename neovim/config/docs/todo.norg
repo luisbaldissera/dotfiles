@@ -1,0 +1,6 @@
+* Ideas
+** ( ) Mason CLI module
+	 New module in Mason plugin to manage general CLI tools which may be useful for plugins solely build to manage them. Example of tools I would already add there:
+	 - acli (atlassian, jira, confluence)
+	 - glab (gitlab)
+	 - pandoc (html, markdown, latex, pdf, docx)

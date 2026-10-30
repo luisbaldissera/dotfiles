@@ -1,0 +1,7 @@
+- ( ) nvim-template/nvim-scaffold which allows defining arbritrary file templating/scaffolding :idea:plugin:
+- ( ) nvim-pom which allows nice mappings to manage pom and connection with maven repository from pom.xml files :idea:plugin:
+- ( ) plugin with proper integration to Atlassian using acli, allowing to view/edit pages in confluece and tickets in jira, buffer based :idea:plugin:
+- ( ) make dap configuration/adapters to accept generically from strpath('config')/dap folder :config:
+
+
+

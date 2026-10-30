@@ -1,0 +1,9 @@
+.luarc.json
+
+autoload/plug.vim.old
+lazy-lock.json
+snippets/java.snippets
+snippets/sh.snippets
+snippets/cucumber.snippets
+.venv
+.airules

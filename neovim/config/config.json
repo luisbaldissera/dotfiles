@@ -1,0 +1,126 @@
+{
+  "options": {
+    "relativenumber": {
+      "global": true,
+      "local": {
+        "help,netrw,oil,codecompanion,markdown": false
+      }
+    },
+    "colorcolumn": {
+      "global": 0,
+      "local": {
+        "help,markdown": 81,
+        "xxd": "10,50,69"
+      }
+    },
+    "expandtab": {
+      "global": true,
+      "local": {"plaintext": false}
+    },
+    "foldlevel": {
+      "global": 999,
+      "local": {"git,sql,vim": 0, "json": 1}
+    },
+    "foldmethod": {"global": "syntax", "local": {"vim": "marker"}},
+    "foldtext": {
+      "global": "folding#foldtext()",
+      "local": { "help": "foldtext()" }
+    },
+    "number": {
+      "global": true,
+      "local": {
+        "help,netrw,oil,codecompanion,markdown": false
+      }
+    }
+  },
+  "plugins": {
+    "David-Kunz/gen.nvim": {
+      "lua": {
+        "require": "gen",
+        "setup": {
+          "model": "llama3"
+        }
+      }
+    },
+    "Joorem/vim-haproxy": {},
+    "L3MON4D3/LuaSnip": {
+      "install": {"do": "make install_jsregexp", "tag": "v1.2.*"}
+    },
+    "NLKNguyen/vim-maven-syntax": {},
+    "airblade/vim-gitgutter": {},
+    "antoinemadec/FixCursorHold.nvim": {},
+    "ap/vim-css-color": {},
+    "dart-lang/dart-vim-plugin": {},
+    "honza/vim-snippets": {},
+    "hrsh7th/cmp-buffer": {},
+    "hrsh7th/cmp-cmdline": {},
+    "hrsh7th/cmp-nvim-lsp": {},
+    "hrsh7th/cmp-path": {},
+    "itchyny/calendar.vim": {},
+    "itchyny/lightline.vim": {
+      "options": {
+        "g:lightline": {
+          "active": {
+            "left": [
+              ["mode", "paste"],
+              ["gitbranch", "readonly", "filename", "modified"]
+            ],
+            "right": [
+              ["lineinfo"],
+              ["percent"],
+              ["fileformat", "fileencoding", "filetype"]
+            ]
+          },
+          "colorscheme": "powerline",
+          "component_function": {"gitbranch": "fugitive#Head"}
+        }
+      }
+    },
+    "junkblocker/git-time-lapse": {},
+    "kshenoy/vim-signature": {},
+    "leafgarland/typescript-vim": {},
+    "lervag/vimtex": {},
+    "liuchengxu/space-vim-theme": {},
+    "maxmellon/vim-jsx-pretty": {},
+    "morhetz/gruvbox": {"options": {"g:gruvbox_contrast_dark": "hard"}},
+    "mfussenegger/nvim-dap": {},
+    "nvim-lua/plenary.nvim": {},
+    "nvim-lua/popup.nvim": {},
+    "nvim-neotest/neotest": {},
+    "nvim-tree/nvim-web-devicons": {},
+    "pangloss/vim-javascript": {},
+    "peitalin/vim-jsx-typescript": {},
+    "pedrohdz/vim-yaml-folds": {},
+    "puremourning/vimspector": {
+      "options": {
+        "g:vimspector_install_gadgets": [
+          "vscode-cpptools",
+          "vscode-node-debug2"
+        ]
+      }
+    },
+    "rhysd/git-messenger.vim": {},
+    "scrooloose/vim-slumlord": {},
+    "simrat39/symbols-outline.nvim": {},
+    "sonph/onehalf": {"install": {"rtp": "vim"}},
+    "stevearc/dressing.nvim": {
+      "lua": {
+        "require": "dressing",
+        "setup": {}
+      }
+    },
+    "stevearc/vim-arduino": {},
+    "thosakwe/vim-flutter": {},
+    "tkhren/vim-fake": {},
+    "tomasr/molokai": {},
+    "tpope/vim-cucumber": {},
+    "tpope/vim-rails": {},
+    "vim-pandoc/vim-pandoc": {},
+    "vim-pandoc/vim-pandoc-syntax": {},
+    "xuhdev/vim-latex-live-preview": {}
+  },
+  "ui": {
+    "filetype": "plugin indent on",
+    "syntax": "on"
+  }
+}

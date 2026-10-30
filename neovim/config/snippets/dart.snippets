@@ -1,0 +1,127 @@
+snippet main Insert a main function, used as an entry point.
+		void main(List<String> args) {
+		  $0
+		}
+
+snippet try Insert a try/catch block.
+		try {
+		  $0
+		} catch (${1:e}) {
+		}
+
+snippet if Insert an if statement.
+		if ($1) {
+		  $0
+		}
+
+snippet ife Insert an if statement with an else block.
+		if ($1) {
+		  $0
+		} else {
+		}
+
+snippet switch Insert a switch statement.
+		switch ($1) {
+		  case $2:
+		    $0
+		    break;
+		  default:
+		}
+
+snippet for Insert a for loop.
+		for (var i = 0; i < ${1:count}; i++) {
+		  $0
+		}
+
+snippet fori Insert a for-in loop.
+		for (var ${1:item} in ${2:items}) {
+		  $0
+		}
+
+snippet while Insert a while loop.
+		while ($1) {
+		  $0
+		}
+
+snippet do Insert a do-while loop.
+		do {
+		  $0
+		} while ($1)
+
+snippet fun Insert a function definition.
+		${3:void} ${1:name}(${2:args}) {
+		  $0
+		}
+
+snippet class Insert a class definition.
+		class ${1:Name} {
+		  $0
+		}
+
+snippet typedef Insert a typedef.
+	  typedef ${1:Type} ${2:Name}(${3:params});
+
+snippet test Insert a test block.
+		test('$1', () {
+		  $0
+		});
+
+snippet group Insert a test group block.
+		group('$1', () {
+		  $0
+		});
+
+snippet stless Insert Flutter Stateless Widget.
+		class $1 extends StatelessWidget {
+		  const $1({ Key? key }) : super(key: key);
+		
+		  @override
+		  Widget build(BuildContext context) {
+		    return ${0:const Placeholder()};
+		  }
+		}
+
+snippet stful Insert Flutter Stateful Widget.
+		class $1 extends StatefulWidget {
+			const $1({ Key? key }) : super(key: key);
+		
+			@override
+			State<$1> createState() => _$1State();
+		}
+		
+		class _$1State extends State<$1> {
+			@override
+			Widget build(BuildContext context) {
+				return ${0:const Placeholder()};
+			}
+		}
+
+snippet stanim Insert Flutter Widget with AnimationController.
+		class $1 extends StatefulWidget {
+		  const $1({ Key? key }) : super(key: key);
+		
+		  @override
+		  State<$1> createState() => _$1State();
+		}
+		
+		class _$1State extends State<$1>
+		    with SingleTickerProviderStateMixin {
+		  late AnimationController _controller;
+		
+		  @override
+		  void initState() {
+		    super.initState();
+		    _controller = AnimationController(vsync: this);
+		  }
+		
+		  @override
+		  void dispose() {
+		    _controller.dispose();
+		    super.dispose();
+		  }
+		
+		  @override
+		  Widget build(BuildContext context) {
+		    return ${0:const Placeholder()};
+		  }
+		}

@@ -20,7 +20,8 @@ Last baseline import: 2026-10-30 from the working tree at `~/.config/nvim` on Ar
 
 - `init.lua` defines core options, leaders, basic tab/buffer mappings, loads `config.lazy`, and selects Gruvbox.
 - `lua/config/lazy.lua` bootstraps `lazy.nvim`, imports plugin specs from `lua/plugins/`, disables Hererocks, and enables update checking.
-- There are 33 plugin specification files covering completion, formatting, Git, DAP, LSP/Mason, navigation, UI, Neorg, Overseer, Tree-sitter management, and related tooling.
+- There are 34 plugin specification files covering completion, formatting, Git, DAP, LSP/Mason, navigation, UI, Neorg, Overseer, Tree-sitter management, and related tooling.
+- `vim-tmux-navigator` is pinned in `lazy-lock.json` and maps only `Ctrl-w` followed by `h/j/k/l` or an arrow key. It uses native Neovim window movement when a split exists in that direction and hands navigation to tmux only at the editor boundary; the plugin's bare `Ctrl-h/j/k/l` and `Ctrl-\\` defaults are disabled.
 - Neovim 0.11-style LSP definitions live under `lsp/`; current named configurations include Copilot, LemMinX, Lua LS, and rust-analyzer.
 - Custom behavior is split between Lua modules under `lua/` and legacy Vimscript under `plugin/` plus `config.vim`.
 - Personal Neorg material and snippets are stored within the configuration tree and are therefore managed by the repository.

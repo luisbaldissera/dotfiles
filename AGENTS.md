@@ -1,6 +1,6 @@
 # System Configuration Repository
 
-This repository manages personal configuration for tmux, Kitty, Neovim, workmux, and Zsh on Arch Linux.
+This repository manages personal configuration for tmux, Kitty, Neovim, Laio, workmux, and Zsh on Arch Linux.
 
 ## Repository rules
 
@@ -24,6 +24,7 @@ The root agent is the dotfiles coordinator. When the user asks for the `dotfiles
 | tmux behavior, bindings, plugins, clipboard, pane/session behavior | `tmux` | `tmux/` |
 | Kitty terminal appearance, fonts, mappings, layouts, shell integration | `kitty` | `kitty/` |
 | Neovim options, mappings, plugins, LSP, formatting, debugging | `neovim` | `neovim/` |
+| Laio installation, session templates, layouts, and lifecycle | `laio` | `laio/` |
 | workmux installation, global defaults, worktrees, pane orchestration | `workmux` | `workmux/` |
 | Zsh startup, PATH and environment, aliases, functions, completion, prompts | `zsh` | `zsh/` |
 
@@ -48,6 +49,7 @@ For a single-component request, prefer the matching specialist when the user ask
 - `tmux/`: tmux configuration and specialist instructions.
 - `kitty/`: Kitty configuration and specialist instructions.
 - `neovim/`: Neovim configuration and specialist instructions.
+- `laio/`: Laio installation, global template, and specialist instructions.
 - `workmux/`: workmux installation, global configuration, and specialist instructions.
 - `zsh/`: Zsh startup configuration and specialist instructions.
 - `.codex/`: project-level Codex settings and custom agent definitions.

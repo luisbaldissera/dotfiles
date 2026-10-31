@@ -1,0 +1,30 @@
+pkgname=laio-bin
+_pkgname=laio
+pkgver=0.18.0
+pkgrel=1
+pkgdesc='Flexbox-inspired layout and session manager for tmux'
+arch=('x86_64' 'aarch64')
+url='https://laio.sh/'
+license=('Apache-2.0')
+depends=('tmux>=3.0')
+provides=("laio=${pkgver}")
+conflicts=('laio')
+options=('!debug' '!strip')
+
+source_x86_64=("${_pkgname}-${pkgver}-x86_64-linux.tgz::https://github.com/ck3mp3r/laio-cli/releases/download/v${pkgver}/${_pkgname}-${pkgver}-x86_64-linux.tgz")
+sha256sums_x86_64=('7618fbd17265838e638636c57b28e47e1c559067038efecb296ac1a1ae595649')
+source_aarch64=("${_pkgname}-${pkgver}-aarch64-linux.tgz::https://github.com/ck3mp3r/laio-cli/releases/download/v${pkgver}/${_pkgname}-${pkgver}-aarch64-linux.tgz")
+sha256sums_aarch64=('4ba1fd272f2711c38922d6ca0c386f3b2642d3d781b504a6bc9c4392aa0e7cf8')
+
+package() {
+  install -Dm755 "${srcdir}/bin/laio" "${pkgdir}/usr/bin/laio"
+
+  install -Dm644 /dev/null "${pkgdir}/usr/share/bash-completion/completions/laio"
+  "${srcdir}/bin/laio" completion bash > "${pkgdir}/usr/share/bash-completion/completions/laio"
+
+  install -Dm644 /dev/null "${pkgdir}/usr/share/zsh/site-functions/_laio"
+  "${srcdir}/bin/laio" completion zsh > "${pkgdir}/usr/share/zsh/site-functions/_laio"
+
+  install -Dm644 /dev/null "${pkgdir}/usr/share/fish/vendor_completions.d/laio.fish"
+  "${srcdir}/bin/laio" completion fish > "${pkgdir}/usr/share/fish/vendor_completions.d/laio.fish"
+}

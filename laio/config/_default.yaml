@@ -1,0 +1,19 @@
+name: {{ session_name }}
+path: {{ path }}
+shell: /bin/zsh
+
+windows:
+  - name: editor
+    panes:
+      - name: neovim
+        focus: true
+        commands:
+          - command: nvim
+
+  - name: terminal
+    flex_direction: row
+    panes:
+      - name: shell-left
+        flex: 1
+      - name: shell-right
+        flex: 1

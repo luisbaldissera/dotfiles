@@ -15,7 +15,7 @@ No `~/.zshenv`, `~/.zlogin`, `~/.zlogout`, or `~/.config/zsh/` directory was pre
 
 ## Current behavior
 
-- Oh My Zsh is loaded from `~/.oh-my-zsh` with the `robbyrussell` theme.
+- Oh My Zsh is loaded from `~/.oh-my-zsh` with the `gruvbox-dark` theme from `moinferdi/gruvbox-zsh`.
 - Enabled Oh My Zsh plugins are `git`, `taskwarrior`, `pyenv`, and `nvm`.
 - `nvim` is the default editor. `lg` invokes `lazygit`, and `osv` starts Neovim's OSV server.
 - NVM loads from `~/.nvm` and selects the stable Node.js release, installing it when unavailable.
@@ -25,6 +25,8 @@ No `~/.zshenv`, `~/.zlogin`, `~/.zlogout`, or `~/.config/zsh/` directory was pre
 - An optional untracked `${XDG_CONFIG_HOME:-$HOME/.config}/zsh/secrets.zsh` is sourced last when readable.
 
 ## Security and operational notes
+
+- The Gruvbox theme is an installed dependency at `${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/gruvbox-dark.zsh-theme`, outside the repository. Before deploying on a new machine, download `https://raw.githubusercontent.com/moinferdi/gruvbox-zsh/main/themes/gruvbox-dark.zsh-theme` there (create the parent directory first). `sync.sh` does not install themes or download code during shell startup.
 
 - The imported `.zshrc` contained plaintext service credentials. Their values were deliberately excluded from the repository and must be revoked and replaced outside Git.
 - `secrets.example.zsh` documents the local secrets-file convention without containing credentials.

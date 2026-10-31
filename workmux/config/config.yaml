@@ -1,4 +1,28 @@
-# Personal cross-project defaults belong here. An empty mapping keeps workmux's
-# built-in defaults until explicit preferences are chosen.
-{}
+# Personal cross-project defaults; project .workmux.yaml files may override them.
+agent: codex
+mode: window
+status_format: true
+
+# Start the chosen agent above a shell for tests, builds, and Git commands.
+# `workmux add <branch> --agent claude` selects Claude Code instead.
+panes:
+  - command: <agent>
+    focus: true
+  - split: vertical
+    percentage: 30
+
+layouts:
+  # One full-size agent, still selectable with --agent.
+  solo:
+    panes:
+      - command: <agent>
+        focus: true
+  # Both agents share this worktree; prompts are delivered to both.
+  pair:
+    panes:
+      - command: codex
+        focus: true
+      - command: claude
+        split: horizontal
+        percentage: 50
 
